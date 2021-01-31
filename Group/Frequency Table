@@ -1,0 +1,62 @@
+/* BETA VERSION! NON-INTERACTIVE!
+kaya kung ginagamit mo to at sakaling may bug, report mo lang sakin facebook.com/hizonpastorpili
+gumagawa din pala ako ng science and programming videos sa channel ko youtube.com/hizonpastorpili
+Subscribe and leave a like */
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    // Ilagay mo lang yung given na Cl at f mula sa table
+
+    const int numElements = 8; // palitan mo to base sa dami ng rows ng table, sa assignment may 9 rows sila
+
+    int Cl[numElements][2] = { {15, 24}, // 1st row ng Cl
+                               {25, 34}, // 2nd row ng Cl
+                               {35, 44}, // 3rd row ng Cl
+                               {45, 54}, // 4th row ng Cl
+                               {55, 64}, // 5th row ng Cl
+                               {65, 74}, // 6th row ng Cl
+                               {75, 84}, // 7th row ng Cl
+                               {85, 94} }; // 8th row ng Cl
+
+    int f[numElements] = {5, 10, 11, 23, 26, 14, 8, 3}; // laman ng mga frequency by array
+
+    // Dito sa baba gumagana lahat ng mathematical solution
+
+    int sumFreq = 0;
+    double midPoint, totalClass = 0, fx, sumfx = 0;
+
+    cout << setw(12) << left << "CL"
+         << setw(5) << left << "f"
+         << setw(8) << left << "x"
+         << setw(10) << left << "fx" << endl;
+    cout << "---------------------------------" << endl;
+
+    for(int i=0; i<numElements; i++)
+        {
+            for (int j=0; j<2; j++)
+            {
+                totalClass += Cl[i][j];
+                cout << setw(6) << Cl[i][j];
+            }
+            cout << setw(5) << f[i];
+            midPoint = totalClass/2;
+            cout << setw(8) << midPoint;
+            fx = f[i] * midPoint;
+            cout << setw(10) << fx;
+            sumfx += fx;
+            sumFreq += f[i];
+            cout << endl;
+            totalClass = 0;
+        }
+
+    cout << endl;
+    cout << "n = " << sumFreq << endl;
+    cout << "Summation of fx = " << sumfx << endl;
+    cout << "mean = " << sumfx/sumFreq << endl;
+
+    return 0;
+}
