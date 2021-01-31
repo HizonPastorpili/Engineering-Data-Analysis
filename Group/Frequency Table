@@ -12,7 +12,7 @@ int main()
     // NOTE: Para lang to sa Group Data na may given na Frequency
     // Ilagay mo lang yung given na Cl at f mula sa table
 
-    const int numElements = 8; // palitan mo to base sa dami ng rows ng table, sa assignment may 9 rows sila
+    const int numElements = 8; // palitan mo to base sa dami ng rows ng table, sa assignment may 8 rows sila
 
     int Cl[numElements][2] = { {15, 24}, // 1st row ng Cl
                                {25, 34}, // 2nd row ng Cl
